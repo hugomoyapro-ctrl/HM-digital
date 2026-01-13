@@ -1,554 +1,192 @@
-:root{
-  --bg: #F7F7F8;
-  --panel: rgba(255,255,255,.92);
-  --stroke: rgba(15,23,42,.10);
-  --text: rgba(15,23,42,.92);
-  --muted: rgba(15,23,42,.62);
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>HM Digital — Google Ads & Sites Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  --gold: #D8A106;
-  --gold2:#B88700;
-  --teal: #0E7C7B;
-  --teal2:#0AA7A5;
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  --shadow: 0 18px 55px rgba(2,6,23,.10);
-  --shadow2: 0 10px 30px rgba(2,6,23,.08);
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=999">
+</head>
 
-  --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --serif: "Playfair Display", Georgia, serif;
-}
+<body>
 
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  font-family:var(--font);
-  background: var(--bg);
-  color: var(--text);
-  overflow-x:hidden;
-}
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="HM Digital">
+      <div>
+        <strong>HM Digital</strong>
+        <span>Google Ads • Sites web</span>
+      </div>
+    </div>
 
-a{ color: inherit; text-decoration:none; }
-.container{
-  width:min(1120px, calc(100% - 40px));
-  margin:0 auto;
-}
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#method">Méthode</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </div>
+</header>
 
-/* Background */
-.bg{ position:fixed; inset:0; pointer-events:none; z-index:-1; }
-.orb{
-  position:absolute;
-  width: 520px; height:520px;
-  filter: blur(30px);
-  opacity:.22;
-  border-radius: 50%;
-}
-.orb--gold{ right:-160px; top:-160px; background: radial-gradient(circle at 30% 30%, rgba(216,161,6,.9), transparent 60%); }
-.orb--teal{ left:-160px; bottom:-160px; background: radial-gradient(circle at 30% 30%, rgba(10,167,165,.85), transparent 60%); }
-.grid{
-  position:absolute; inset:-2px;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(216,161,6,.12), transparent 40%),
-    radial-gradient(circle at 80% 90%, rgba(10,167,165,.10), transparent 40%),
-    linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px);
-  background-size: auto, auto, 70px 70px, 70px 70px;
-  mask-image: radial-gradient(circle at 50% 20%, black 35%, transparent 70%);
-  opacity:.35;
-}
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>
+        Générez plus d’appels<br>
+        avec <span>Google Ads</span> et un site qui convertit
+      </h1>
 
-/* Topbar */
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:20;
-  backdrop-filter: blur(14px);
-  background: rgba(247,247,248,.75);
-  border-bottom: 1px solid var(--stroke);
-}
-.topbar__inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 0;
-}
-.brand{ display:flex; gap:12px; align-items:center; }
-.brand__logo{
-  width:46px; height:46px;
-  object-fit:contain;
-  border-radius: 12px;
-  background: rgba(255,255,255,.95);
-  border: 1px solid var(--stroke);
-  padding:6px;
-}
-.brand__name{
-  font-family: var(--serif);
-  letter-spacing:.2px;
-  font-weight:700;
-  line-height:1.1;
-}
-.brand__tag{
-  font-size:12px;
-  color: var(--muted);
-  margin-top:2px;
-}
+      <p>
+        HM Digital accompagne les entreprises locales avec une approche simple,
+        mesurable et orientée résultats.
+      </p>
 
-.nav{ display:flex; gap:18px; align-items:center; }
-.nav a{
-  font-size:14px;
-  color: rgba(15,23,42,.75);
-  padding:10px 10px;
-  border-radius: 10px;
-  transition: .2s ease;
-}
-.nav a:hover{ background: rgba(15,23,42,.04); color: rgba(15,23,42,.92); }
+      <div class="hero-actions">
+        <a href="tel:0617255364" class="btn primary">📞 Appeler</a>
+        <a href="#contact" class="btn ghost">Audit 10 min</a>
+      </div>
+    </div>
 
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:12px 16px;
-  border-radius: 14px;
-  font-weight:600;
-  border:1px solid var(--stroke);
-  transition: transform .12s ease, background .2s ease, border .2s ease;
-  user-select:none;
-}
-.btn:active{ transform: translateY(1px); }
-.btn--primary{
-  color: #0b1220;
-  background: linear-gradient(135deg, rgba(216,161,6,.95), rgba(10,167,165,.55));
-  border: 1px solid rgba(15,23,42,.12);
-  box-shadow: 0 14px 40px rgba(216,161,6,.12);
-}
-.btn--primary:hover{ filter: brightness(1.02); }
-.btn--soft{
-  background: rgba(255,255,255,.85);
-}
-.btn--soft:hover{ background: rgba(255,255,255,.95); }
-.btn--ghost{
-  background: transparent;
-}
-.btn--ghost:hover{ background: rgba(15,23,42,.04); }
-.btn--full{ width:100%; }
+    <div class="hero-card">
+      <h3>Approche</h3>
+      <ul>
+        <li>Campagnes Google Ads locales</li>
+        <li>Sites optimisés conversion</li>
+        <li>Suivi clair et transparent</li>
+      </ul>
+      <p class="small">Le budget publicité est payé directement à Google.</p>
+    </div>
+  </div>
+</section>
 
-/* Burger */
-.burger{
-  display:none;
-  width:44px; height:44px;
-  border-radius: 12px;
-  border: 1px solid var(--stroke);
-  background: rgba(255,255,255,.70);
-}
-.burger span{
-  display:block;
-  width:18px; height:2px;
-  margin:4px auto;
-  background: rgba(15,23,42,.72);
-  border-radius: 2px;
-}
+<section id="services" class="section">
+  <div class="container">
+    <h2>Services</h2>
 
-/* Mobile nav */
-.mobileNav{
-  display:none;
-  padding: 10px 20px 18px;
-  border-top: 1px solid var(--stroke);
-  background: rgba(247,247,248,.92);
-}
-.mobileNav a{
-  display:block;
-  padding: 12px 10px;
-  border-radius: 12px;
-  color: rgba(15,23,42,.86);
-  background: rgba(255,255,255,.82);
-  border: 1px solid var(--stroke);
-  margin-top:10px;
-}
-.mobileNav--open{ display:block; }
+    <div class="grid">
+      <div class="card">
+        <h3>Google Ads</h3>
+        <p>Génération d’appels et de demandes qualifiées via Google.</p>
+      </div>
+      <div class="card">
+        <h3>Site web</h3>
+        <p>Site clair, rapide et rassurant pour convertir les visiteurs.</p>
+      </div>
+      <div class="card">
+        <h3>Suivi</h3>
+        <p>Lecture simple des performances et optimisations continues.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* Hero */
-.hero{ padding: 80px 0 40px; }
-.hero__inner{
-  display:grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 28px;
-  align-items: start;
-}
-.pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  font-size:13px;
-  color: rgba(15,23,42,.70);
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--stroke);
-  padding: 10px 12px;
-  border-radius: 999px;
-}
-.dot{
-  width:8px;height:8px;border-radius:50%;
-  background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(216,161,6,.18);
-}
+<section id="method" class="section light">
+  <div class="container">
+    <h2>Méthode</h2>
 
-.hero__title{
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(34px, 4.2vw, 54px);
-  line-height: 1.06;
-  margin: 18px 0 14px;
-  letter-spacing: .2px;
-}
-.accent{
-  background: linear-gradient(135deg, var(--gold2), var(--teal));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color: transparent;
-}
-.hero__subtitle{
-  color: rgba(15,23,42,.72);
-  font-size: 16px;
-  line-height: 1.7;
-  max-width: 58ch;
-}
-.hero__cta{ display:flex; gap:12px; margin-top: 22px; flex-wrap: wrap; }
+    <div class="grid">
+      <div class="card">
+        <strong>1. Audit</strong>
+        <p>Analyse rapide du potentiel et de la concurrence.</p>
+      </div>
+      <div class="card">
+        <strong>2. Test</strong>
+        <p>Lancement d’une campagne pour valider les coûts.</p>
+      </div>
+      <div class="card">
+        <strong>3. Optimisation</strong>
+        <p>Amélioration continue si les résultats sont bons.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-.trust{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:10px;
-  margin-top: 22px;
-}
-.trust__item{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.78);
-  border: 1px solid var(--stroke);
-}
-.trust__kpi{
-  width:34px;height:34px;
-  border-radius: 12px;
-  display:grid; place-items:center;
-  background: rgba(15,23,42,.04);
-  border: 1px solid var(--stroke);
-}
-.trust__txt{ color: rgba(15,23,42,.70); font-size: 14px; }
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Indiquez votre activité et votre ville. Je vous réponds rapidement.</p>
 
-/* Glass card */
-.hero__card{ position:relative; }
-.glassCard{
-  border-radius: 22px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  overflow:hidden;
-}
-.glassCard::before{
-  content:"";
-  position:absolute; inset:-2px;
-  background: radial-gradient(circle at 30% 10%, rgba(216,161,6,.20), transparent 35%),
-              radial-gradient(circle at 70% 90%, rgba(10,167,165,.18), transparent 35%);
-  opacity:.9;
-  z-index:0;
-}
-.glassCard > *{ position:relative; z-index:1; }
+    <!-- iframe caché -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-.glassCard__head{
-  display:flex;
-  gap:10px;
-  margin-bottom: 10px;
-}
-.badge{
-  font-size:12px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  background: rgba(15,23,42,.04);
-  border: 1px solid var(--stroke);
-}
-.badge--muted{ color: rgba(15,23,42,.68); }
+    <form
+      class="contact-form"
+      method="POST"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      target="hidden_iframe"
+      onsubmit="showMessage()"
+    >
+      <label>
+        Nom / Entreprise
+        <input type="text" name="company" required>
+      </label>
 
-.metric{
-  padding: 12px 12px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--stroke);
-  margin-top: 10px;
-}
-.metric__label{ font-size: 12px; color: rgba(15,23,42,.62); }
-.metric__value{ margin-top: 6px; font-weight: 600; }
+      <label>
+        Ville
+        <input type="text" name="city" required>
+      </label>
 
-.divider{
-  height: 1px;
-  background: rgba(15,23,42,.10);
-  margin: 14px 0;
-}
-.mini__title{ font-weight: 700; }
-.mini__list{
-  margin: 10px 0 14px;
-  padding-left: 18px;
-  color: rgba(15,23,42,.70);
-  line-height: 1.6;
-}
-.note{ margin-top: 10px; font-size: 12px; color: rgba(15,23,42,.60); }
+      <label>
+        Objectif principal
+        <select name="goal" required>
+          <option value="">Choisissez</option>
+          <option>Recevoir plus d'appels</option>
+          <option>Recevoir plus de formulaires</option>
+          <option>Créer ou optimiser un site</option>
+          <option>Google Ads + Site</option>
+        </select>
+      </label>
 
-/* Sections */
-.section{ padding: 68px 0; }
-.section--alt{
-  background: rgba(255,255,255,.65);
-  border-top: 1px solid var(--stroke);
-  border-bottom: 1px solid var(--stroke);
-}
-.section__head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap: 18px;
-  margin-bottom: 26px;
-}
-.section__head h2{
-  font-family: var(--serif);
-  margin:0;
-  font-size: 34px;
-  letter-spacing:.2px;
-}
-.section__head p{
-  margin:0;
-  color: rgba(15,23,42,.70);
-  max-width: 52ch;
-  line-height: 1.6;
-}
+      <label>
+        Téléphone
+        <input type="tel" name="phone">
+      </label>
 
-/* Cards */
-.cards{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.card{
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  border-radius: 20px;
-  padding: 18px;
-  box-shadow: var(--shadow2);
-  transition: transform .15s ease, background .2s ease;
-}
-.card:hover{ transform: translateY(-2px); background: rgba(255,255,255,.95); }
-.card__icon{
-  width:42px;height:42px;
-  border-radius: 14px;
-  display:grid; place-items:center;
-  background: rgba(15,23,42,.04);
-  border: 1px solid var(--stroke);
-  margin-bottom: 10px;
-}
-.card h3{ margin: 8px 0 8px; }
-.card p{ margin:0 0 10px; color: rgba(15,23,42,.70); line-height: 1.6; }
-.card ul{
-  margin: 0;
-  padding-left: 18px;
-  color: rgba(15,23,42,.68);
-  line-height: 1.6;
-}
+      <label>
+        Email
+        <input type="email" name="email">
+      </label>
 
-/* Steps */
-.steps{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.step{
-  border-radius: 20px;
-  padding: 18px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  box-shadow: var(--shadow2);
-}
-.step__n{
-  width:44px;height:44px;
-  border-radius: 16px;
-  display:grid; place-items:center;
-  background: linear-gradient(135deg, rgba(216,161,6,.22), rgba(10,167,165,.14));
-  border: 1px solid var(--stroke);
-  font-weight: 700;
-}
-.step h3{ margin: 12px 0 6px; }
-.step p{ margin:0; color: rgba(15,23,42,.70); line-height: 1.6; }
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
 
-.callout{
-  margin-top: 18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap: 18px;
-  padding: 18px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-}
+      <!-- anti-spam -->
+      <input type="text" name="_gotcha" class="hp">
 
-/* Pricing */
-.pricing{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.price{
-  position:relative;
-  border-radius: 22px;
-  padding: 20px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  box-shadow: var(--shadow2);
-  overflow:hidden;
-}
-.price__top h3{ margin:0; }
-.price__sub{ margin: 6px 0 0; color: rgba(15,23,42,.68); }
-.price__value{
-  margin-top: 14px;
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: .2px;
-}
-.price__value span{
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(15,23,42,.60);
-  margin-left: 8px;
-}
-.price__fine{
-  margin-top: 6px;
-  color: rgba(15,23,42,.60);
-  font-size: 13px;
-  line-height: 1.5;
-}
-.price__list{
-  margin: 14px 0 18px;
-  padding-left: 18px;
-  color: rgba(15,23,42,.68);
-  line-height: 1.75;
-}
-.price--featured{
-  border-color: rgba(216,161,6,.35);
-  background: linear-gradient(180deg, rgba(216,161,6,.10), rgba(10,167,165,.06));
-}
-.shine{
-  position:absolute; inset:-2px;
-  background: radial-gradient(circle at 20% 20%, rgba(216,161,6,.18), transparent 45%),
-              radial-gradient(circle at 80% 80%, rgba(10,167,165,.14), transparent 45%);
-  opacity:.9;
-  pointer-events:none;
-}
-.price--featured > *{ position:relative; z-index:1; }
+      <button type="submit" class="btn primary full">Envoyer</button>
 
-.microProof{
-  margin-top: 16px;
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.microProof__item{
-  padding: 10px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.82);
-  border: 1px solid var(--stroke);
-  color: rgba(15,23,42,.68);
-  font-size: 13px;
-}
+      <p id="formMsg" class="form-msg"></p>
+    </form>
+  </div>
+</section>
 
-/* FAQ */
-.faq{ display:grid; gap: 10px; }
-.qa{
-  border-radius: 18px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  padding: 14px 16px;
-}
-.qa summary{
-  cursor:pointer;
-  font-weight: 700;
-  outline:none;
-}
-.qa p{
-  margin: 10px 0 0;
-  color: rgba(15,23,42,.70);
-  line-height: 1.7;
-}
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      HM Digital<br>
+      📞 06 17 25 53 64<br>
+      ✉️ hmdigital.contact@gmail.com
+    </div>
+    <div class="small">
+      © <span id="year"></span> HM Digital
+    </div>
+  </div>
+</footer>
 
-/* Contact */
-.contact{
-  display:grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 16px;
-  align-items: start;
-}
-.contactCard,
-.contact__form{
-  border-radius: 22px;
-  padding: 20px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--stroke);
-  box-shadow: var(--shadow2);
-}
-.muted{ color: rgba(15,23,42,.62); }
-.small{ font-size: 13px; line-height: 1.6; }
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-.contactRow{
-  display:flex; gap: 10px; align-items:center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(15,23,42,.08);
-}
-.contactRow:last-of-type{ border-bottom:none; }
-.contactActions{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  function showMessage() {
+    document.getElementById("formMsg").textContent =
+      "✅ Merci, votre demande a bien été envoyée. Je vous recontacte rapidement.";
+  }
+</script>
 
-label{ display:block; font-size: 13px; color: rgba(15,23,42,.72); margin-bottom: 12px; }
-input, select, textarea{
-  width:100%;
-  margin-top: 8px;
-  padding: 12px 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,.92);
-  border: 1px solid rgba(15,23,42,.12);
-  color: rgba(15,23,42,.92);
-  outline:none;
-}
-input:focus, select:focus, textarea:focus{
-  border-color: rgba(216,161,6,.55);
-  box-shadow: 0 0 0 4px rgba(216,161,6,.16);
-}
-
-/* Footer */
-.footer{
-  padding: 22px 0 40px;
-  border-top: 1px solid var(--stroke);
-  background: rgba(255,255,255,.70);
-}
-.footer__inner{
-  display:flex;
-  justify-content:space-between;
-  gap: 12px;
-  color: rgba(15,23,42,.62);
-  font-size: 13px;
-}
-.footer__links{ display:flex; gap: 14px; }
-.footer__links a:hover{ color: rgba(15,23,42,.92); }
-
-/* Responsive */
-@media (max-width: 980px){
-  .hero__inner{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-  .steps{ grid-template-columns: 1fr; }
-  .pricing{ grid-template-columns: 1fr; }
-  .contact{ grid-template-columns: 1fr; }
-  .section__head{ flex-direction: column; align-items:flex-start; }
-}
-@media (max-width: 820px){
-  .nav{ display:none; }
-  .burger{ display:block; }
-  .mobileNav{ display:none; }
-  .mobileNav--open{ display:block; }
-}
+</body>
+</html>
