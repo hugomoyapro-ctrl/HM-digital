@@ -5,208 +5,159 @@
   <title>HM Digital — Google Ads & Sites Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts (optionnel, si ça charge pas en local c'est pas grave) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: #f7f7f8;
-      color: #0f172a;
-      font-family: Inter, Arial, sans-serif;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:#f7f7f8;
+      color:#0f172a;
+      font-family:Inter,Arial,sans-serif;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:40px 20px}
 
-    /* HEADER */
-    .header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,.08);
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.08);
     }
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{
+      width:46px;height:46px;object-fit:contain;
+      border-radius:12px;background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      padding:6px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand img {
-      width: 46px; height: 46px; object-fit: contain;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid rgba(0,0,0,.08);
-      padding: 6px;
-    }
-    .brand strong { font-family: "Playfair Display", serif; font-size: 18px; display:block; line-height: 1.1; }
-    .brand span { font-size: 12px; color: rgba(15,23,42,.65); }
+    .brand strong{font-family:"Playfair Display",serif;font-size:18px;display:block;line-height:1.05}
+    .brand span{font-size:12px;color:rgba(15,23,42,.62)}
+    nav a{margin-left:18px;font-weight:700;color:rgba(15,23,42,.78)}
+    nav a:hover{color:rgba(15,23,42,1)}
 
-    nav a { margin-left: 18px; font-weight: 600; color: rgba(15,23,42,.8); }
-    nav a:hover { color: rgba(15,23,42,1); }
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:14px;
+      font-weight:800;border:1px solid rgba(0,0,0,.10);
+      background:#fff;cursor:pointer;
+      transition:.15s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,#d8a106,#0aa7a5);
+      color:#0f172a;border:1px solid rgba(0,0,0,.12);
+      box-shadow:0 18px 40px rgba(216,161,6,.14);
+    }
+    .btn.ghost{background:transparent}
+    .btn.full{width:100%}
 
-    /* BUTTONS */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 12px 16px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid rgba(0,0,0,.10);
-      background: #fff;
-      cursor: pointer;
+    /* Hero */
+    .hero{padding:30px 0 10px}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(0,0,0,.08);
+      color:rgba(15,23,42,.68);
+      font-size:13px;width:fit-content;
     }
-    .btn.primary {
-      background: linear-gradient(135deg, #d8a106, #0aa7a5);
-      color: #0f172a;
-      border: 1px solid rgba(0,0,0,.12);
-      box-shadow: 0 18px 40px rgba(216,161,6,.14);
+    .dot{width:8px;height:8px;border-radius:50%;background:#d8a106;box-shadow:0 0 0 4px rgba(216,161,6,.18)}
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(34px,4vw,54px);
+      line-height:1.05;margin:16px 0 10px;
+      letter-spacing:.2px;
     }
-    .btn.ghost { background: transparent; }
-    .btn.full { width: 100%; }
+    h1 span{
+      background:linear-gradient(135deg,#b88700,#0e7c7b);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .lead{color:rgba(15,23,42,.72);line-height:1.75;max-width:62ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
 
-    /* HERO */
-    .hero { padding: 30px 0 10px; }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      align-items: start;
+    .card{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:0 20px 50px rgba(0,0,0,.08);
+      position:relative;overflow:hidden;
     }
-    .pill {
-      display:inline-flex; gap:10px; align-items:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.85);
-      border: 1px solid rgba(0,0,0,.08);
-      color: rgba(15,23,42,.7);
-      font-size: 13px;
-      width: fit-content;
+    .card:before{
+      content:"";position:absolute;inset:-2px;pointer-events:none;
+      background:radial-gradient(circle at 20% 10%, rgba(216,161,6,.18), transparent 45%),
+                 radial-gradient(circle at 80% 90%, rgba(10,167,165,.14), transparent 45%);
     }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: #d8a106; box-shadow: 0 0 0 4px rgba(216,161,6,.18); }
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4vw, 52px);
-      margin: 16px 0 10px;
-      line-height: 1.05;
-      letter-spacing: .2px;
-    }
-    h1 span {
-      background: linear-gradient(135deg, #b88700, #0e7c7b);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .hero p { color: rgba(15,23,42,.72); line-height: 1.7; max-width: 60ch; }
-    .hero-actions { display:flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+    .card>*{position:relative}
+    .card h3{margin:0 0 10px}
+    .card ul{margin:0;padding-left:18px;color:rgba(15,23,42,.72);line-height:1.85}
+    .small{font-size:13px;color:rgba(15,23,42,.62);margin-top:10px}
 
-    .hero-card {
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.08);
-      position: relative;
-      overflow: hidden;
+    /* Sections */
+    .section{padding:40px 0}
+    .section.light{
+      background:rgba(255,255,255,.72);
+      border-top:1px solid rgba(0,0,0,.06);
+      border-bottom:1px solid rgba(0,0,0,.06);
     }
-    .hero-card:before {
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(circle at 20% 10%, rgba(216,161,6,.18), transparent 45%),
-                  radial-gradient(circle at 80% 90%, rgba(10,167,165,.14), transparent 45%);
-      pointer-events:none;
+    h2{font-family:"Playfair Display",serif;font-size:34px;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .box{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 18px 40px rgba(0,0,0,.07);
     }
-    .hero-card > * { position: relative; }
-    .hero-card h3 { margin: 0 0 10px; }
-    .hero-card ul { margin: 0; padding-left: 18px; color: rgba(15,23,42,.72); line-height: 1.8; }
-    .small { font-size: 13px; color: rgba(15,23,42,.62); margin-top: 10px; }
+    .box h3{margin:0 0 8px}
+    .box p{margin:0;color:rgba(15,23,42,.72);line-height:1.65}
 
-    /* SECTIONS */
-    .section { padding: 40px 0; }
-    .section.light { background: rgba(255,255,255,.75); border-top: 1px solid rgba(0,0,0,.06); border-bottom: 1px solid rgba(0,0,0,.06); }
-    h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
-      margin: 0 0 18px;
-    }
+    /* Contact */
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+    .row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+    .row:last-child{border-bottom:none}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    form label{
+      display:block;font-size:13px;font-weight:800;color:rgba(15,23,42,.72);
+      margin-bottom:12px;
     }
-    .card {
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.07);
+    input,select,textarea{
+      width:100%;margin-top:6px;padding:12px 12px;
+      border-radius:12px;border:1px solid rgba(0,0,0,.14);
+      background:#fff;font-family:inherit;font-size:14px;outline:none;
     }
-    .card h3 { margin: 0 0 8px; }
-    .card p { margin: 0; color: rgba(15,23,42,.72); line-height: 1.6; }
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(216,161,6,.75);
+      box-shadow:0 0 0 3px rgba(216,161,6,.18);
+    }
+    .hp{display:none}
+    .form-msg{margin-top:12px;color:#0e7c7b;font-weight:800}
 
-    /* CONTACT FORM */
-    .contact-wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-    .contact-card {
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.07);
+    footer{
+      margin-top:30px;
+      background:rgba(255,255,255,.72);
+      border-top:1px solid rgba(0,0,0,.06);
     }
-    .row { display:flex; gap: 10px; align-items:center; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.06); }
-    .row:last-child { border-bottom: none; }
+    .footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .muted{color:rgba(15,23,42,.62)}
 
-    .contact-form {
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.07);
-    }
-    label { display:block; font-size: 13px; font-weight: 600; color: rgba(15,23,42,.75); margin-bottom: 12px; }
-    input, select, textarea {
-      width: 100%;
-      margin-top: 6px;
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.14);
-      background: #fff;
-      font-family: inherit;
-      font-size: 14px;
-      outline: none;
-    }
-    input:focus, select:focus, textarea:focus {
-      border-color: rgba(216,161,6,.7);
-      box-shadow: 0 0 0 3px rgba(216,161,6,.18);
-    }
-    .hp { display:none; }
-    .form-msg { margin-top: 12px; color: #0e7c7b; font-weight: 600; }
-
-    /* FOOTER */
-    .footer {
-      margin-top: 30px;
-      background: rgba(255,255,255,.75);
-      border-top: 1px solid rgba(0,0,0,.06);
-    }
-    .footer-inner { display:flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-    .muted { color: rgba(15,23,42,.62); }
-
-    /* RESPONSIVE */
-    @media (max-width: 980px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      .contact-wrap { grid-template-columns: 1fr; }
-      nav { display:none; }
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .contact-wrap{grid-template-columns:1fr}
+      nav{display:none}
     }
   </style>
 </head>
 
 <body>
 
-<header class="header">
+<header>
   <div class="container header-inner">
     <div class="brand">
       <img src="logo.png" alt="HM Digital">
@@ -228,21 +179,18 @@
   <div class="container hero-inner">
     <div>
       <div class="pill"><span class="dot"></span> Acquisition locale premium • Budget maîtrisé • Suivi clair</div>
-
       <h1>Générez plus d’appels<br>avec <span>Google Ads</span> & un site qui convertit.</h1>
-
-      <p>
+      <p class="lead">
         HM Digital accompagne les entreprises locales avec une approche simple :
         attirer (Google Ads) → convertir (site) → mesurer (suivi).
       </p>
-
       <div class="hero-actions">
-        <a href="tel:0617255364" class="btn primary">📞 Appeler</a>
-        <a href="#contact" class="btn ghost">Audit 10 min</a>
+        <a class="btn primary" href="tel:0617255364">📞 Appeler</a>
+        <a class="btn ghost" href="#contact">Audit 10 min</a>
       </div>
     </div>
 
-    <div class="hero-card">
+    <div class="card">
       <h3>Approche</h3>
       <ul>
         <li>Campagnes Google Ads locales orientées appels</li>
@@ -258,15 +206,15 @@
   <div class="container">
     <h2>Services</h2>
     <div class="grid">
-      <div class="card">
+      <div class="box">
         <h3>Google Ads</h3>
         <p>Génération d’appels et de demandes qualifiées via Google.</p>
       </div>
-      <div class="card">
+      <div class="box">
         <h3>Site web</h3>
         <p>Site optimisé conversion (appels, formulaire, prise de contact).</p>
       </div>
-      <div class="card">
+      <div class="box">
         <h3>Suivi</h3>
         <p>Lecture simple des performances + optimisations continues.</p>
       </div>
@@ -278,15 +226,15 @@
   <div class="container">
     <h2>Méthode</h2>
     <div class="grid">
-      <div class="card">
+      <div class="box">
         <h3>1. Audit</h3>
         <p>Analyse rapide du potentiel et de la concurrence.</p>
       </div>
-      <div class="card">
+      <div class="box">
         <h3>2. Test</h3>
         <p>Lancement d’une campagne pour valider les coûts.</p>
       </div>
-      <div class="card">
+      <div class="box">
         <h3>3. Optimisation</h3>
         <p>Amélioration continue si les résultats sont bons.</p>
       </div>
@@ -300,7 +248,7 @@
     <p class="muted">Indiquez votre activité et votre ville. Je vous réponds rapidement.</p>
 
     <div class="contact-wrap">
-      <div class="contact-card">
+      <div class="box">
         <h3 style="margin-top:0;">HM Digital</h3>
         <div class="row"><span>📞</span><a href="tel:0617255364">06 17 25 53 64</a></div>
         <div class="row"><span>✉️</span><a href="mailto:hmdigital.contact@gmail.com">hmdigital.contact@gmail.com</a></div>
@@ -308,14 +256,20 @@
         <p class="small">Après l’appel, vous recevez un récapitulatif clair (objectif, budget, plan d’action).</p>
       </div>
 
-      <!-- IFRAME caché = submit sans quitter la page -->
+      <!-- IFRAME caché = submit FormSubmit sans quitter la page -->
       <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-      <form class="contact-form"
+      <form class="box"
             method="POST"
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formsubmit.co/hmdigital.contact@gmail.com"
             target="hidden_iframe"
-            onsubmit="showMessage()">
+            onsubmit="return showMessageAndReset();">
+
+        <!-- FormSubmit options -->
+        <input type="hidden" name="_subject" value="Nouveau lead — HM Digital">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- IMPORTANT : on évite une redirection -->
+        <input type="hidden" name="_next" value="https://example.com"> <!-- ignoré car iframe -->
 
         <label>Nom / Entreprise
           <input type="text" name="company" required>
@@ -347,7 +301,8 @@
           <textarea name="message" rows="5" required></textarea>
         </label>
 
-        <input type="text" name="_gotcha" class="hp">
+        <!-- Anti-spam -->
+        <input type="text" name="_honey" class="hp">
 
         <button type="submit" class="btn primary full">Envoyer</button>
         <p id="formMsg" class="form-msg"></p>
@@ -358,7 +313,7 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer>
   <div class="container footer-inner">
     <div class="muted">© <span id="year"></span> HM Digital</div>
     <div class="muted">hmdigital.contact@gmail.com • 06 17 25 53 64</div>
@@ -368,9 +323,18 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  function showMessage() {
-    document.getElementById("formMsg").textContent =
-      "✅ Merci, votre demande a bien été envoyée. Je vous recontacte rapidement.";
+  function showMessageAndReset(){
+    const msg = document.getElementById("formMsg");
+    msg.textContent = "✅ Merci ! Votre demande a bien été envoyée. Je vous recontacte rapidement.";
+
+    // reset après 300ms (le POST part dans l’iframe)
+    setTimeout(() => {
+      const form = msg.closest("form");
+      if(form) form.reset();
+    }, 300);
+
+    // on laisse le submit se faire (vrai POST)
+    return true;
   }
 </script>
 
