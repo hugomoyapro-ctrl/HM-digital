@@ -159,6 +159,35 @@
       background:linear-gradient(180deg, rgba(216,161,6,.10), rgba(10,167,165,.06));
     }
 
+    /* ===== "Pour qui" tags ===== */
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow:0 10px 25px rgba(0,0,0,.06);
+      font-weight:800;font-size:13px;color:rgba(15,23,42,.78)
+    }
+
+    /* ===== 30 jours ===== */
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+    .step{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 18px 40px rgba(0,0,0,.07);
+    }
+    .kpi{
+      width:44px;height:44px;border-radius:14px;
+      display:grid;place-items:center;
+      background:rgba(15,23,42,.06);
+      border:1px solid rgba(0,0,0,.08);
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
     /* ===== Contact ===== */
     .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
     .row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)}
@@ -197,6 +226,7 @@
       .grid3{grid-template-columns:1fr}
       .pricing{grid-template-columns:1fr}
       .contact-wrap{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr}
       nav{display:none}
     }
   </style>
@@ -221,7 +251,9 @@
 
       <nav>
         <a href="#services">Services</a>
+        <a href="#forwho">Pour qui ?</a>
         <a href="#method">Méthode</a>
+        <a href="#days30">30 jours</a>
         <a href="#offers">Formules</a>
         <a href="#contact" class="btn navBtn">Contact</a>
       </nav>
@@ -249,8 +281,8 @@
       <div class="card glow reveal">
         <h3>Approche</h3>
         <ul>
-          <li>Campagnes Google Ads locales orientées appels</li>
-          <li>Site clair, rapide et rassurant pour convertir</li>
+          <li>Campagnes Google Ads orientées appels et demandes</li>
+          <li>Pages / site optimisés conversion (CTA, rassurance, vitesse)</li>
           <li>Suivi simple + optimisations continues</li>
         </ul>
         <p class="small">Transparence : le budget publicité est payé directement à Google.</p>
@@ -280,10 +312,33 @@
     </div>
   </section>
 
+  <!-- ===== Pour qui ? ===== -->
+  <section id="forwho" class="section light reveal">
+    <div class="container">
+      <h2>Pour qui ?</h2>
+      <p class="muted">Cette méthode fonctionne pour toute activité locale qui veut plus d’appels ou de demandes.</p>
+
+      <div class="chips reveal">
+        <div class="chip">🛠️ Artisans</div>
+        <div class="chip">🏥 Santé / bien-être</div>
+        <div class="chip">🏠 Services à domicile</div>
+        <div class="chip">🏪 Commerces</div>
+        <div class="chip">🏢 B2B local</div>
+        <div class="chip">🚚 Dépannage / urgence</div>
+        <div class="chip">🏬 Réseaux / franchises</div>
+        <div class="chip">📍 Multi-sites</div>
+      </div>
+
+      <p class="small muted" style="margin-top:14px;">
+        Objectif : apparaître au bon moment quand un client cherche votre service, et transformer ce clic en appel ou en message.
+      </p>
+    </div>
+  </section>
+
   <section id="method" class="section light reveal">
     <div class="container">
       <h2>Méthode</h2>
-      <p class="muted">3 étapes. Pas plus. Parce que le business doit rester simple.</p>
+      <p class="muted">Une méthode simple et efficace, applicable à toute activité locale.</p>
 
       <div class="grid3">
         <div class="box reveal">
@@ -292,13 +347,48 @@
         </div>
         <div class="box reveal">
           <h3>2. Test</h3>
-          <p>Lancement contrôlé pour valider coût / appel et qualité des leads.</p>
+          <p>Lancement contrôlé pour valider coût / lead et qualité des demandes.</p>
         </div>
         <div class="box reveal">
           <h3>3. Optimisation</h3>
           <p>Amélioration continue, puis montée progressive si rentable.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== 30 jours ===== -->
+  <section id="days30" class="section reveal">
+    <div class="container">
+      <h2>Ce que vous obtenez en 30 jours</h2>
+      <p class="muted">Un plan clair, des campagnes propres, et des décisions basées sur des données.</p>
+
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="kpi">S1</div>
+          <h3>Structure propre</h3>
+          <p class="muted">Mots-clés, annonces, ciblage géographique, extensions, tracking.</p>
+        </div>
+        <div class="step reveal">
+          <div class="kpi">S2</div>
+          <h3>Données + ajustements</h3>
+          <p class="muted">On coupe ce qui ne marche pas, on renforce ce qui performe.</p>
+        </div>
+        <div class="step reveal">
+          <div class="kpi">S3</div>
+          <h3>Optimisation conversion</h3>
+          <p class="muted">Amélioration des annonces et de la page (CTA, rassurance, vitesse).</p>
+        </div>
+        <div class="step reveal">
+          <div class="kpi">S4</div>
+          <h3>Plan pour scaler</h3>
+          <p class="muted">Lecture claire + stratégie : stabiliser puis augmenter progressivement.</p>
+        </div>
+      </div>
+
+      <p class="small muted" style="margin-top:14px;">
+        💡 Le but n’est pas “d’être visible”, mais de générer des demandes rentables et mesurables.
+      </p>
     </div>
   </section>
 
@@ -318,7 +408,7 @@
             <li>Optimisations régulières</li>
             <li>Reporting simple (ce qui marche / à améliorer)</li>
           </ul>
-          <p class="small muted">Idéal pour démarrer sur 1 garage / 1 zone.</p>
+          <p class="small muted">Idéal pour démarrer sur 1 activité / 1 zone.</p>
           <a class="btn primary full" href="#contact">Demander une proposition</a>
         </div>
 
@@ -327,12 +417,12 @@
           <h3>Pack Réseau</h3>
           <div class="price">250€ <span class="muted">/ mois / site</span></div>
           <ul>
-            <li>Campagnes dédiées par garage</li>
+            <li>Campagnes dédiées par activité ou zone</li>
             <li>Ciblage géographique précis</li>
             <li>Optimisations continues</li>
-            <li>Suivi et lecture par site</li>
+            <li>Suivi et lecture par site ou entité</li>
           </ul>
-          <p class="small muted">Tarif préférentiel à partir de plusieurs sites.</p>
+          <p class="small muted">Tarif préférentiel à partir de plusieurs sites ou zones.</p>
           <a class="btn primary full" href="#contact">Voir l’offre réseau</a>
         </div>
 
@@ -341,12 +431,12 @@
           <h3>Landing / Site</h3>
           <div class="price">Sur devis</div>
           <ul>
-            <li>Landing orientée appels</li>
+            <li>Landing orientée appels / demandes</li>
             <li>Pages locales (1 par ville/zone)</li>
             <li>Optimisation conversion</li>
             <li>Vitesse & design premium</li>
           </ul>
-          <p class="small muted">Recommandé pour maximiser le coût / appel.</p>
+          <p class="small muted">Recommandé pour maximiser le coût par lead.</p>
           <a class="btn full" href="#contact">Demander un devis</a>
         </div>
       </div>
