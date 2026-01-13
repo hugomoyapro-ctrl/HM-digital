@@ -1,77 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HM Digital – Google Ads & Sites Web</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HM Digital — Google Ads & Sites Web</title>
+  <meta name="description" content="HM Digital : Google Ads & sites web premium pour entreprises locales. Plus d'appels, plus de contacts, suivi clair." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Police premium -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-<header class="header">
-  <img src="logo.png" alt="HM Digital" class="logo">
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#process">Méthode</a>
-    <a href="#contact" class="btn">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Google Ads & Sites web<br>pour entreprises locales</h1>
-  <p>HM Digital aide les entreprises à générer plus d’appels et de clients grâce à des campagnes Google Ads ciblées et des sites web optimisés.</p>
-
-  <div class="hero-buttons">
-    <a href="tel:0600000000" class="btn-primary">📞 Appeler</a>
-    <a href="#contact" class="btn-secondary">📩 Demander un audit</a>
+  <!-- Background decor -->
+  <div class="bg">
+    <div class="orb orb--gold"></div>
+    <div class="orb orb--teal"></div>
+    <div class="grid"></div>
   </div>
-</section>
 
-<section id="services" class="section">
-  <h2>Nos services</h2>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="HM Digital">
+        <img src="logo.png" alt="HM Digital" class="brand__logo" />
+        <div class="brand__text">
+          <div class="brand__name">HM Digital</div>
+          <div class="brand__tag">Google Ads • Sites Web</div>
+        </div>
+      </a>
 
-  <div class="cards">
-    <div class="card">
-      <h3>📊 Google Ads</h3>
-      <p>Campagnes locales orientées appels et contacts, avec budget maîtrisé.</p>
+      <nav class="nav" aria-label="Navigation">
+        <a href="#services">Services</a>
+        <a href="#method">Méthode</a>
+        <a href="#cases">Offres</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+      </nav>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <div class="card">
-      <h3>💻 Sites web</h3>
-      <p>Sites simples, rapides et optimisés pour convertir les visiteurs en clients.</p>
+    <div class="mobileNav" aria-hidden="true">
+      <a href="#services">Services</a>
+      <a href="#method">Méthode</a>
+      <a href="#cases">Offres</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--primary" href="#contact">Demander un audit</a>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>📈 Suivi & optimisation</h3>
-      <p>Analyse des performances et ajustements continus.</p>
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <div class="pill">
+          <span class="dot"></span>
+          Acquisition locale premium • Budget maîtrisé • Suivi clair
+        </div>
+
+        <h1 class="hero__title">
+          Génère plus d’appels<br/>
+          avec <span class="accent">Google Ads</span> & un site qui convertit.
+        </h1>
+
+        <p class="hero__subtitle">
+          HM Digital accompagne les entreprises locales avec une approche simple :
+          <strong>attirer</strong> (Google Ads) → <strong>convertir</strong> (site) → <strong>mesurer</strong> (suivi).
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tel:0600000000">📞 Appeler</a>
+          <a class="btn btn--soft" href="#contact">📩 Audit 10 min</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust__item">
+            <div class="trust__kpi">+</div>
+            <div class="trust__txt">Campagnes orientées appels & contacts</div>
+          </div>
+          <div class="trust__item">
+            <div class="trust__kpi">✓</div>
+            <div class="trust__txt">Transparence : le budget pub est payé à Google</div>
+          </div>
+          <div class="trust__item">
+            <div class="trust__kpi">⏱</div>
+            <div class="trust__txt">Mise en place rapide & optimisations continues</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="glassCard">
+          <div class="glassCard__head">
+            <div class="badge">📍 Local</div>
+            <div class="badge badge--muted">📈 Performance</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric__label">Objectif</div>
+            <div class="metric__value">Appels qualifiés</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric__label">Canaux</div>
+            <div class="metric__value">Recherche • Maps • Mobile</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric__label">Méthode</div>
+            <div class="metric__value">Test court → validation → scaling</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="mini">
+            <div class="mini__title">Ce que tu obtiens</div>
+            <ul class="mini__list">
+              <li>Structure Google Ads propre (tracking & appels)</li>
+              <li>Landing / site optimisé conversion</li>
+              <li>Suivi et optimisations (simple & lisible)</li>
+            </ul>
+          </div>
+
+          <a class="btn btn--primary btn--full" href="#contact">Recevoir une proposition</a>
+          <p class="note">Sans jargon. Sans blabla. Objectif : du concret.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </main>
 
-<section id="process" class="section light">
-  <h2>Notre méthode</h2>
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Services</h2>
+        <p>Une offre courte, premium, orientée résultats — pour les entreprises locales.</p>
+      </div>
 
-  <div class="steps">
-    <div>1️⃣ Analyse rapide</div>
-    <div>2️⃣ Mise en place</div>
-    <div>3️⃣ Suivi & résultats</div>
-  </div>
-</section>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">📊</div>
+          <h3>Google Ads (Local)</h3>
+          <p>Campagnes ciblées (zone, intentions, horaires) pour générer des appels et demandes de contact.</p>
+          <ul>
+            <li>Structure propre & tracking</li>
+            <li>Optimisation continue</li>
+            <li>Budget maîtrisé</li>
+          </ul>
+        </article>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Parlons de votre projet 👇</p>
+        <article class="card">
+          <div class="card__icon">💻</div>
+          <h3>Site / Landing premium</h3>
+          <p>Un site rapide, clair, rassurant — pensé pour convertir (appels, formulaire, WhatsApp).</p>
+          <ul>
+            <li>Design moderne</li>
+            <li>Vitesse & lisibilité</li>
+            <li>CTA efficaces</li>
+          </ul>
+        </article>
 
-  <div class="contact-box">
-    <p>📞 Téléphone : <strong>06 00 00 00 00</strong></p>
-    <p>📩 Email : <strong>contact@hmdigital.fr</strong></p>
-  </div>
-</section>
+        <article class="card">
+          <div class="card__icon">📈</div>
+          <h3>Suivi & reporting</h3>
+          <p>Un suivi simple : ce qui a été dépensé, ce qui a été gagné, et quoi améliorer.</p>
+          <ul>
+            <li>Lecture claire</li>
+            <li>Décisions rapides</li>
+            <li>Améliorations mensuelles</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© HM Digital – Tous droits réservés</p>
-</footer>
+  <!-- Method -->
+  <section id="method" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Méthode</h2>
+        <p>3 étapes. Pas plus. Parce que le business doit rester simple.</p>
+      </div>
 
+      <div class="steps">
+        <div class="step">
+          <div class="step__n">01</div>
+          <h3>Audit express</h3>
+          <p>On voit ce que vos clients voient (annonces, concurrence, opportunités).</p>
+        </div>
+        <div class="step">
+          <div class="step__n">02</div>
+          <h3>Test court</h3>
+          <p>On lance une campagne ciblée pour valider le coût et la qualité des appels.</p>
+        </div>
+        <div class="step">
+          <div class="step__n">03</div>
+          <h3>Optimisation & scaling</h3>
+          <p>Si c’est rentable : on stabilise, puis on augmente progressivement.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout__left">
+          <h3>Transparence totale</h3>
+          <p>Le budget publicité est payé directement à Google. HM Digital facture uniquement la mise en place et la gestion.</p>
+        </div>
+        <a class="btn btn--primary" href="#contact">Demander un audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers -->
+  <section id="cases" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Offres</h2>
+        <p>Deux formats simples. Tu choisis selon ton niveau de confiance.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price">
+          <div class="price__top">
+            <h3>Test “Validation”</h3>
+            <p class="price__sub">Idéal pour démarrer sans risque.</p>
+          </div>
+          <div class="price__value">300€ <span>mise en place & suivi</span></div>
+          <div class="price__fine">+ budget pub conseillé : 200–300€ (payé à Google)</div>
+          <ul class="price__list">
+            <li>Campagne locale orientée appels</li>
+            <li>Tracking & réglages essentiels</li>
+            <li>Optimisations pendant le test</li>
+            <li>Récap clair des résultats</li>
+          </ul>
+          <a class="btn btn--soft btn--full" href="#contact">Choisir cette offre</a>
+        </article>
+
+        <article class="price price--featured">
+          <div class="shine"></div>
+          <div class="price__top">
+            <h3>Test “Sérieux”</h3>
+            <p class="price__sub">Plus de volume pour conclure vite.</p>
+          </div>
+          <div class="price__value">300€ <span>mise en place & suivi</span></div>
+          <div class="price__fine">+ budget pub conseillé : 500€ (payé à Google)</div>
+          <ul class="price__list">
+            <li>Tout du pack “Validation”</li>
+            <li>Plus de data pour optimiser</li>
+            <li>Meilleure lecture du coût / appel</li>
+            <li>Plan d’action pour la suite</li>
+          </ul>
+          <a class="btn btn--primary btn--full" href="#contact">Lancer le test</a>
+        </article>
+      </div>
+
+      <div class="microProof">
+        <div class="microProof__item">✅ Pas d’engagement long terme pour le test</div>
+        <div class="microProof__item">✅ Approche premium, simple et mesurable</div>
+        <div class="microProof__item">✅ Idéal pour garages, artisans, santé, services</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>FAQ</h2>
+        <p>Les questions que tes prospects vont te poser.</p>
+      </div>
+
+      <div class="faq">
+        <details class="qa">
+          <summary>Est-ce qu’un petit budget suffit ?</summary>
+          <p>Pour un test, oui : l’objectif n’est pas le volume, mais de valider la qualité des appels et le coût. Si c’est rentable, on augmente ensuite.</p>
+        </details>
+
+        <details class="qa">
+          <summary>Vous garantissez des résultats ?</summary>
+          <p>Non. Personne de sérieux ne “garantit”. En revanche, on met en place une structure propre, on mesure, et on optimise en continu.</p>
+        </details>
+
+        <details class="qa">
+          <summary>Je suis déjà bien positionné naturellement, ça vaut le coup ?</summary>
+          <p>Justement : Google Ads vient s’ajouter au référencement naturel pour capter des appels avant les résultats organiques (annonces en haut de page).</p>
+        </details>
+
+        <details class="qa">
+          <summary>Combien de temps avant d’avoir des retours ?</summary>
+          <p>Souvent quelques jours, mais la lecture “propre” se fait avec un minimum de données. L’objectif du test est de conclure vite et proprement.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Contact</h2>
+        <p>Dis-moi ton activité + ta ville. Je te réponds avec une proposition simple.</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact__left">
+          <div class="contactCard">
+            <h3>HM Digital</h3>
+            <p class="muted">Google Ads • Sites web • Acquisition locale</p>
+            <div class="contactRow">
+              <span>📞</span>
+              <a href="tel:0600000000">06 00 00 00 00</a>
+            </div>
+            <div class="contactRow">
+              <span>📩</span>
+              <a href="mailto:contact@hmdigital.fr">contact@hmdigital.fr</a>
+            </div>
+            <div class="contactRow">
+              <span>📍</span>
+              <span>France / Île-de-France</span>
+            </div>
+
+            <div class="contactActions">
+              <a class="btn btn--primary" href="tel:0600000000">Appeler</a>
+              <a class="btn btn--ghost" href="mailto:contact@hmdigital.fr">Envoyer un mail</a>
+            </div>
+
+            <p class="small muted">
+              Astuce : après un appel, je t’envoie un récap clair (objectif, budget, plan d’action).
+            </p>
+          </div>
+        </div>
+
+        <form class="contact__form" onsubmit="return false;">
+          <label>
+            Nom / Entreprise
+            <input type="text" placeholder="Ex : Garage XYZ" />
+          </label>
+
+          <label>
+            Ville
+            <input type="text" placeholder="Ex : Villebon-sur-Yvette" />
+          </label>
+
+          <label>
+            Objectif principal
+            <select>
+              <option>Recevoir plus d'appels</option>
+              <option>Recevoir plus de formulaires</option>
+              <option>Refaire/optimiser mon site</option>
+              <option>Les deux (Ads + site)</option>
+            </select>
+          </label>
+
+          <label>
+            Message
+            <textarea rows="5" placeholder="Ton activité, tes services, et ce que tu veux améliorer..."></textarea>
+          </label>
+
+          <div class="formActions">
+            <a class="btn btn--primary btn--full" href="mailto:contact@hmdigital.fr?subject=Demande%20d%27audit%20HM%20Digital&body=Bonjour%2C%0A%0AJe%20souhaite%20un%20audit.%0AActivit%C3%A9%20%3A%20%0AVille%20%3A%20%0AObjectif%20%3A%20%0A%0AMerci%2C">Envoyer (mail)</a>
+            <p class="small muted">Le formulaire envoie par email (simple). On pourra le connecter à un vrai formulaire ensuite.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> HM Digital. Tous droits réservés.</div>
+      <div class="footer__links">
+        <a href="#top">Haut de page</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.querySelector('.burger');
+    const mobileNav = document.querySelector('.mobileNav');
+
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobileNav.classList.toggle('mobileNav--open');
+      mobileNav.setAttribute('aria-hidden', String(open));
+    });
+
+    // Close menu on click
+    document.querySelectorAll('.mobileNav a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('mobileNav--open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+  </script>
 </body>
 </html>
