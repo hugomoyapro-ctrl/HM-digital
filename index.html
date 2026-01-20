@@ -1,575 +1,651 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Comptoir — Restaurant</title>
+  <meta name="description" content="Restaurant — cuisine maison. Menu, réservations, horaires et contact." />
 
-\f0\fs24 \cf0 <!doctype html>\
-<html lang="fr">\
-<head>\
-  <meta charset="utf-8">\
-  <title>HM Digital \'97 Google Ads & Sites Web</title>\
-  <meta name="viewport" content="width=device-width, initial-scale=1">\
-\
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">\
-\
-  <style>\
-    /* ===== Reset ===== */\
-    *\{box-sizing:border-box\}\
-    html,body\{margin:0;padding:0\}\
-    body\{\
-      background:#f7f7f8;\
-      color:#0f172a;\
-      font-family:Inter,Arial,sans-serif;\
-      overflow-x:hidden;\
-    \}\
-    a\{color:inherit;text-decoration:none\}\
-    ul\{margin:0\}\
-    .container\{max-width:1120px;margin:0 auto;padding:40px 20px\}\
-\
-    /* ===== Background decor ===== */\
-    .bg\{position:fixed;inset:0;pointer-events:none;z-index:-1\}\
-    .orb\{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(30px);opacity:.22\}\
-    .orb.gold\{right:-160px;top:-160px;background:radial-gradient(circle at 30% 30%, rgba(216,161,6,.9), transparent 60%)\}\
-    .orb.teal\{left:-160px;bottom:-160px;background:radial-gradient(circle at 30% 30%, rgba(10,167,165,.85), transparent 60%)\}\
-    .grid\{\
-      position:absolute;inset:-2px;opacity:.32;\
-      background:\
-        radial-gradient(circle at 20% 10%, rgba(216,161,6,.12), transparent 40%),\
-        radial-gradient(circle at 80% 90%, rgba(10,167,165,.10), transparent 40%),\
-        linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),\
-        linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px);\
-      background-size:auto,auto,70px 70px,70px 70px;\
-      mask-image: radial-gradient(circle at 50% 20%, black 35%, transparent 70%);\
-    \}\
-\
-    /* ===== Header ===== */\
-    header\{\
-      position:sticky;top:0;z-index:50;\
-      background:rgba(255,255,255,.88);\
-      backdrop-filter:blur(12px);\
-      border-bottom:1px solid rgba(0,0,0,.08);\
-    \}\
-    .header-inner\{display:flex;align-items:center;justify-content:space-between;padding:14px 0\}\
-    .brand\{display:flex;gap:12px;align-items:center;cursor:pointer\}\
-    .brand img\{\
-      width:46px;height:46px;object-fit:contain;\
-      border-radius:12px;background:#fff;\
-      border:1px solid rgba(0,0,0,.08);\
-      padding:6px;\
-    \}\
-    .brand strong\{font-family:"Playfair Display",serif;font-size:18px;display:block;line-height:1.05\}\
-    .brand span\{display:block;font-size:12px;color:rgba(15,23,42,.62)\}\
-    nav a\{margin-left:18px;font-weight:800;color:rgba(15,23,42,.78)\}\
-    nav a:hover\{color:rgba(15,23,42,1)\}\
-    .navBtn\{margin-left:18px\}\
-\
-    /* ===== Buttons ===== */\
-    .btn\{\
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;\
-      padding:12px 16px;border-radius:14px;\
-      font-weight:900;border:1px solid rgba(0,0,0,.10);\
-      background:#fff;cursor:pointer;\
-      transition:transform .15s ease, filter .15s ease, background .15s ease;\
-      user-select:none;\
-    \}\
-    .btn:hover\{transform:translateY(-1px)\}\
-    .btn:active\{transform:translateY(0px)\}\
-    .btn.primary\{\
-      background:linear-gradient(135deg,#d8a106,#0aa7a5);\
-      color:#0f172a;border:1px solid rgba(0,0,0,.12);\
-      box-shadow:0 18px 40px rgba(216,161,6,.14);\
-    \}\
-    .btn.ghost\{background:transparent\}\
-    .btn.full\{width:100%\}\
-\
-    /* ===== Hero ===== */\
-    .hero\{padding:30px 0 10px\}\
-    .hero-inner\{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start\}\
-    .pill\{\
-      display:inline-flex;align-items:center;gap:10px;\
-      padding:10px 12px;border-radius:999px;\
-      background:rgba(255,255,255,.88);\
-      border:1px solid rgba(0,0,0,.08);\
-      color:rgba(15,23,42,.68);\
-      font-size:13px;width:fit-content;\
-    \}\
-    .dot\{width:8px;height:8px;border-radius:50%;background:#d8a106;box-shadow:0 0 0 4px rgba(216,161,6,.18)\}\
-    h1\{\
-      font-family:"Playfair Display",serif;\
-      font-size:clamp(34px,4vw,54px);\
-      line-height:1.05;margin:16px 0 10px;letter-spacing:.2px;\
-    \}\
-    .accent\{\
-      background:linear-gradient(135deg,#b88700,#0e7c7b);\
-      -webkit-background-clip:text;background-clip:text;color:transparent;\
-    \}\
-    .lead\{color:rgba(15,23,42,.72);line-height:1.75;max-width:62ch\}\
-    .hero-actions\{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px\}\
-\
-    /* ===== Cards ===== */\
-    .card\{\
-      background:rgba(255,255,255,.92);\
-      border:1px solid rgba(0,0,0,.10);\
-      border-radius:18px;\
-      padding:22px;\
-      box-shadow:0 20px 50px rgba(0,0,0,.08);\
-      position:relative;overflow:hidden;\
-    \}\
-    .card.glow:before\{\
-      content:"";position:absolute;inset:-2px;pointer-events:none;\
-      background:radial-gradient(circle at 20% 10%, rgba(216,161,6,.18), transparent 45%),\
-                 radial-gradient(circle at 80% 90%, rgba(10,167,165,.14), transparent 45%);\
-    \}\
-    .card>*\{position:relative\}\
-    .card h3\{margin:0 0 10px\}\
-    .card ul\{padding-left:18px;color:rgba(15,23,42,.72);line-height:1.85\}\
-    .small\{font-size:13px;color:rgba(15,23,42,.62);margin-top:10px\}\
-    .muted\{color:rgba(15,23,42,.62)\}\
-\
-    /* ===== Sections ===== */\
-    .section\{padding:40px 0\}\
-    .section.light\{\
-      background:rgba(255,255,255,.72);\
-      border-top:1px solid rgba(0,0,0,.06);\
-      border-bottom:1px solid rgba(0,0,0,.06);\
-    \}\
-    h2\{font-family:"Playfair Display",serif;font-size:34px;margin:0 0 14px\}\
-    .grid3\{display:grid;grid-template-columns:repeat(3,1fr);gap:16px\}\
-\
-    .box\{\
-      background:rgba(255,255,255,.92);\
-      border:1px solid rgba(0,0,0,.10);\
-      border-radius:16px;\
-      padding:18px;\
-      box-shadow:0 18px 40px rgba(0,0,0,.07);\
-    \}\
-    .box h3\{margin:0 0 8px\}\
-    .box p\{margin:0;color:rgba(15,23,42,.72);line-height:1.65\}\
-\
-    /* ===== Pricing ===== */\
-    .pricing\{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px\}\
-    .priceTag\{\
-      display:inline-block;font-size:12px;font-weight:900;\
-      padding:8px 10px;border-radius:999px;\
-      background:rgba(15,23,42,.06);\
-      border:1px solid rgba(0,0,0,.08);\
-      margin-bottom:10px;\
-    \}\
-    .price\{\
-      font-size:32px;font-weight:900;margin:10px 0 10px;letter-spacing:.2px;\
-    \}\
-    .priceCard ul\{padding-left:18px;color:rgba(15,23,42,.72);line-height:1.85\}\
-    .priceCard.featured\{\
-      border-color:rgba(216,161,6,.35);\
-      background:linear-gradient(180deg, rgba(216,161,6,.10), rgba(10,167,165,.06));\
-    \}\
-\
-    /* ===== "Pour qui" tags ===== */\
-    .chips\{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px\}\
-    .chip\{\
-      display:inline-flex;align-items:center;gap:8px;\
-      padding:10px 12px;border-radius:999px;\
-      background:rgba(255,255,255,.92);\
-      border:1px solid rgba(0,0,0,.10);\
-      box-shadow:0 10px 25px rgba(0,0,0,.06);\
-      font-weight:800;font-size:13px;color:rgba(15,23,42,.78)\
-    \}\
-\
-    /* ===== 30 jours ===== */\
-    .timeline\{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px\}\
-    .step\{\
-      background:rgba(255,255,255,.92);\
-      border:1px solid rgba(0,0,0,.10);\
-      border-radius:16px;\
-      padding:18px;\
-      box-shadow:0 18px 40px rgba(0,0,0,.07);\
-    \}\
-    .kpi\{\
-      width:44px;height:44px;border-radius:14px;\
-      display:grid;place-items:center;\
-      background:rgba(15,23,42,.06);\
-      border:1px solid rgba(0,0,0,.08);\
-      font-weight:900;\
-      margin-bottom:10px;\
-    \}\
-\
-    /* ===== Contact ===== */\
-    .contact-wrap\{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start\}\
-    .row\{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)\}\
-    .row:last-child\{border-bottom:none\}\
-    form label\{\
-      display:block;font-size:13px;font-weight:900;color:rgba(15,23,42,.72);\
-      margin-bottom:12px;\
-    \}\
-    input,select,textarea\{\
-      width:100%;margin-top:6px;padding:12px 12px;\
-      border-radius:12px;border:1px solid rgba(0,0,0,.14);\
-      background:#fff;font-family:inherit;font-size:14px;outline:none;\
-    \}\
-    input:focus,select:focus,textarea:focus\{\
-      border-color:rgba(216,161,6,.75);\
-      box-shadow:0 0 0 3px rgba(216,161,6,.18);\
-    \}\
-    .hp\{display:none\}\
-    .form-msg\{margin-top:12px;color:#0e7c7b;font-weight:900\}\
-\
-    /* ===== Back to top ===== */\
-    .backTop\{\
-      position:fixed;right:18px;bottom:18px;z-index:60;\
-      opacity:0;pointer-events:none;transform:translateY(8px);\
-      transition:.2s ease;\
-    \}\
-    .backTop.show\{opacity:1;pointer-events:auto;transform:translateY(0)\}\
-\
-    /* ===== Animations (reveal) ===== */\
-    .reveal\{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease\}\
-    .reveal.is-visible\{opacity:1;transform:translateY(0)\}\
-\
-    /* ===== Responsive ===== */\
-    @media (max-width:980px)\{\
-      .hero-inner\{grid-template-columns:1fr\}\
-      .grid3\{grid-template-columns:1fr\}\
-      .pricing\{grid-template-columns:1fr\}\
-      .contact-wrap\{grid-template-columns:1fr\}\
-      .timeline\{grid-template-columns:1fr\}\
-      nav\{display:none\}\
-    \}\
-  </style>\
-</head>\
-\
-<body>\
-  <div class="bg" aria-hidden="true">\
-    <div class="orb gold"></div>\
-    <div class="orb teal"></div>\
-    <div class="grid"></div>\
-  </div>\
-\
-  <header>\
-    <div class="container header-inner">\
-      <div class="brand" id="brandTop" title="Retour en haut">\
-        <img src="logo.png" alt="HM Digital">\
-        <div>\
-          <strong>HM Digital</strong>\
-          <span>Google Ads \'95 Sites web</span>\
-        </div>\
-      </div>\
-\
-      <nav>\
-        <a href="#services">Services</a>\
-        <a href="#forwho">Pour qui ?</a>\
-        <a href="#method">M\'e9thode</a>\
-        <a href="#days30">30 jours</a>\
-        <a href="#offers">Formules</a>\
-        <a href="#contact" class="btn navBtn">Contact</a>\
-      </nav>\
-    </div>\
-  </header>\
-\
-  <section class="hero reveal" id="top">\
-    <div class="container hero-inner">\
-      <div class="reveal">\
-        <div class="pill"><span class="dot"></span> Acquisition locale premium \'95 Budget ma\'eetris\'e9 \'95 Suivi clair</div>\
-        <h1>G\'e9n\'e9rez plus d\'92appels<br>avec <span class="accent">Google Ads</span> & un site qui convertit.</h1>\
-        <p class="lead">\
-          HM Digital accompagne les entreprises locales partout en France avec une approche simple :\
-          attirer (Google Ads) \uc0\u8594  convertir (site) \u8594  mesurer (suivi).\
-        </p>\
-\
-        <div class="hero-actions">\
-          <a class="btn primary" href="tel:0617255364">\uc0\u55357 \u56542  Appeler</a>\
-          <a class="btn ghost" href="#contact">Audit 10 min</a>\
-        </div>\
-\
-        <p class="small">\uc0\u55357 \u56525  Intervention : <strong>Toute la France</strong></p>\
-      </div>\
-\
-      <div class="card glow reveal">\
-        <h3>Approche</h3>\
-        <ul>\
-          <li>Campagnes Google Ads orient\'e9es appels et demandes</li>\
-          <li>Pages / site optimis\'e9s conversion (CTA, rassurance, vitesse)</li>\
-          <li>Suivi simple + optimisations continues</li>\
-        </ul>\
-        <p class="small">Transparence : le budget publicit\'e9 est pay\'e9 directement \'e0 Google.</p>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <section id="services" class="section reveal">\
-    <div class="container">\
-      <h2>Services</h2>\
-      <p class="muted">Une offre courte, premium et orient\'e9e r\'e9sultats pour les entreprises locales.</p>\
-\
-      <div class="grid3">\
-        <div class="box reveal">\
-          <h3>Google Ads</h3>\
-          <p>G\'e9n\'e9ration d\'92appels et de demandes qualifi\'e9es via Google (Search / Local).</p>\
-        </div>\
-        <div class="box reveal">\
-          <h3>Site / Landing</h3>\
-          <p>Pages optimis\'e9es conversion : rassurance, vitesse, CTA, formulaire.</p>\
-        </div>\
-        <div class="box reveal">\
-          <h3>Suivi</h3>\
-          <p>Lecture simple des performances et optimisations continues.</p>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- ===== Pour qui ? ===== -->\
-  <section id="forwho" class="section light reveal">\
-    <div class="container">\
-      <h2>Pour qui ?</h2>\
-      <p class="muted">Cette m\'e9thode fonctionne pour toute activit\'e9 locale qui veut plus d\'92appels ou de demandes.</p>\
-\
-      <div class="chips reveal">\
-        <div class="chip">\uc0\u55357 \u57056 \u65039  Artisans</div>\
-        <div class="chip">\uc0\u55356 \u57317  Sant\'e9 / bien-\'eatre</div>\
-        <div class="chip">\uc0\u55356 \u57312  Services \'e0 domicile</div>\
-        <div class="chip">\uc0\u55356 \u57322  Commerces</div>\
-        <div class="chip">\uc0\u55356 \u57314  B2B local</div>\
-        <div class="chip">\uc0\u55357 \u56986  D\'e9pannage / urgence</div>\
-        <div class="chip">\uc0\u55356 \u57324  R\'e9seaux / franchises</div>\
-        <div class="chip">\uc0\u55357 \u56525  Multi-sites</div>\
-      </div>\
-\
-      <p class="small muted" style="margin-top:14px;">\
-        Objectif : appara\'eetre au bon moment quand un client cherche votre service, et transformer ce clic en appel ou en message.\
-      </p>\
-    </div>\
-  </section>\
-\
-  <section id="method" class="section light reveal">\
-    <div class="container">\
-      <h2>M\'e9thode</h2>\
-      <p class="muted">Une m\'e9thode simple et efficace, applicable \'e0 toute activit\'e9 locale.</p>\
-\
-      <div class="grid3">\
-        <div class="box reveal">\
-          <h3>1. Audit</h3>\
-          <p>Analyse rapide du potentiel, de la concurrence et des objectifs.</p>\
-        </div>\
-        <div class="box reveal">\
-          <h3>2. Test</h3>\
-          <p>Lancement contr\'f4l\'e9 pour valider co\'fbt / lead et qualit\'e9 des demandes.</p>\
-        </div>\
-        <div class="box reveal">\
-          <h3>3. Optimisation</h3>\
-          <p>Am\'e9lioration continue, puis mont\'e9e progressive si rentable.</p>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- ===== 30 jours ===== -->\
-  <section id="days30" class="section reveal">\
-    <div class="container">\
-      <h2>Ce que vous obtenez en 30 jours</h2>\
-      <p class="muted">Un plan clair, des campagnes propres, et des d\'e9cisions bas\'e9es sur des donn\'e9es.</p>\
-\
-      <div class="timeline">\
-        <div class="step reveal">\
-          <div class="kpi">S1</div>\
-          <h3>Structure propre</h3>\
-          <p class="muted">Mots-cl\'e9s, annonces, ciblage g\'e9ographique, extensions, tracking.</p>\
-        </div>\
-        <div class="step reveal">\
-          <div class="kpi">S2</div>\
-          <h3>Donn\'e9es + ajustements</h3>\
-          <p class="muted">On coupe ce qui ne marche pas, on renforce ce qui performe.</p>\
-        </div>\
-        <div class="step reveal">\
-          <div class="kpi">S3</div>\
-          <h3>Optimisation conversion</h3>\
-          <p class="muted">Am\'e9lioration des annonces et de la page (CTA, rassurance, vitesse).</p>\
-        </div>\
-        <div class="step reveal">\
-          <div class="kpi">S4</div>\
-          <h3>Plan pour scaler</h3>\
-          <p class="muted">Lecture claire + strat\'e9gie : stabiliser puis augmenter progressivement.</p>\
-        </div>\
-      </div>\
-\
-      <p class="small muted" style="margin-top:14px;">\
-        \uc0\u55357 \u56481  Le but n\'92est pas \'93d\'92\'eatre visible\'94, mais de g\'e9n\'e9rer des demandes rentables et mesurables.\
-      </p>\
-    </div>\
-  </section>\
-\
-  <section id="offers" class="section light reveal">\
-    <div class="container">\
-      <h2>Formules</h2>\
-      <p class="muted">Gestion Google Ads claire, simple et orient\'e9e r\'e9sultats. Le budget publicitaire est pay\'e9 directement \'e0 Google.</p>\
-\
-      <div class="pricing">\
-        <div class="box priceCard reveal">\
-          <div class="priceTag">D\'e9marrage</div>\
-          <h3>Pack Lancement</h3>\
-          <div class="price">300\'80 <span class="muted">/ mois</span></div>\
-          <ul>\
-            <li>Cr\'e9ation / structuration des campagnes</li>\
-            <li>Tracking appels & conversions</li>\
-            <li>Optimisations r\'e9guli\'e8res</li>\
-            <li>Reporting simple (ce qui marche / \'e0 am\'e9liorer)</li>\
-          </ul>\
-          <p class="small muted">Id\'e9al pour d\'e9marrer sur 1 activit\'e9 / 1 zone.</p>\
-          <a class="btn primary full" href="#contact">Demander une proposition</a>\
-        </div>\
-\
-        <div class="box priceCard featured reveal">\
-          <div class="priceTag">Multi-sites</div>\
-          <h3>Pack R\'e9seau</h3>\
-          <div class="price">250\'80 <span class="muted">/ mois / site</span></div>\
-          <ul>\
-            <li>Campagnes d\'e9di\'e9es par activit\'e9 ou zone</li>\
-            <li>Ciblage g\'e9ographique pr\'e9cis</li>\
-            <li>Optimisations continues</li>\
-            <li>Suivi et lecture par site ou entit\'e9</li>\
-          </ul>\
-          <p class="small muted">Tarif pr\'e9f\'e9rentiel \'e0 partir de plusieurs sites ou zones.</p>\
-          <a class="btn primary full" href="#contact">Voir l\'92offre r\'e9seau</a>\
-        </div>\
-\
-        <div class="box priceCard reveal">\
-          <div class="priceTag">Option</div>\
-          <h3>Landing / Site</h3>\
-          <div class="price">Sur devis</div>\
-          <ul>\
-            <li>Landing orient\'e9e appels / demandes</li>\
-            <li>Pages locales (1 par ville/zone)</li>\
-            <li>Optimisation conversion</li>\
-            <li>Vitesse & design premium</li>\
-          </ul>\
-          <p class="small muted">Recommand\'e9 pour maximiser le co\'fbt par lead.</p>\
-          <a class="btn full" href="#contact">Demander un devis</a>\
-        </div>\
-      </div>\
-\
-      <p class="small muted" style="margin-top:14px;">\
-        \uc0\u55357 \u56481  Le budget publicitaire est s\'e9par\'e9 : vous payez Google directement (contr\'f4le total). HM Digital facture la gestion.\
-      </p>\
-    </div>\
-  </section>\
-\
-  <section id="contact" class="section reveal">\
-    <div class="container">\
-      <h2>Contact</h2>\
-      <p class="muted">Indiquez votre activit\'e9 et votre ville. Je vous r\'e9ponds rapidement.</p>\
-\
-      <div class="contact-wrap">\
-        <div class="box reveal">\
-          <h3 style="margin-top:0;">HM Digital</h3>\
-          <div class="row"><span>\uc0\u55357 \u56542 </span><a href="tel:0617255364">06 17 25 53 64</a></div>\
-          <div class="row"><span>\uc0\u9993 \u65039 </span><a href="mailto:hmdigital.contact@gmail.com">hmdigital.contact@gmail.com</a></div>\
-          <div class="row"><span>\uc0\u55357 \u56525 </span><span>Toute la France</span></div>\
-          <p class="small muted">Apr\'e8s l\'92appel, vous recevez un r\'e9capitulatif clair (objectif, budget, plan d\'92action).</p>\
-        </div>\
-\
-        <!-- IFRAME cach\'e9 = submit sans redirection -->\
-        <iframe name="hidden_iframe" style="display:none;"></iframe>\
-\
-        <form class="box reveal"\
-              method="POST"\
-              action="https://formsubmit.co/hmdigital.contact@gmail.com"\
-              target="hidden_iframe"\
-              onsubmit="return showMessageAndReset();">\
-\
-          <!-- Options FormSubmit -->\
-          <input type="hidden" name="_subject" value="Nouveau lead \'97 HM Digital">\
-          <input type="hidden" name="_captcha" value="false">\
-\
-          <label>Nom / Entreprise\
-            <input type="text" name="company" required>\
-          </label>\
-\
-          <label>Ville\
-            <input type="text" name="city" required>\
-          </label>\
-\
-          <label>Objectif principal\
-            <select name="goal" required>\
-              <option value="">Choisissez</option>\
-              <option>Recevoir plus d'appels</option>\
-              <option>Recevoir plus de formulaires</option>\
-              <option>Cr\'e9er ou optimiser un site</option>\
-              <option>Google Ads + Site</option>\
-            </select>\
-          </label>\
-\
-          <label>T\'e9l\'e9phone\
-            <input type="tel" name="phone">\
-          </label>\
-\
-          <label>Email\
-            <input type="email" name="email">\
-          </label>\
-\
-          <label>Message\
-            <textarea name="message" rows="5" required></textarea>\
-          </label>\
-\
-          <!-- Anti-spam -->\
-          <input type="text" name="_honey" class="hp">\
-\
-          <button type="submit" class="btn primary full">Envoyer</button>\
-          <p id="formMsg" class="form-msg"></p>\
-          <p class="small muted">Vous restez sur le site : aucune redirection.</p>\
-        </form>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <footer class="section light">\
-    <div class="container" style="padding-top:20px;padding-bottom:20px;">\
-      <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;">\
-        <div class="muted">\'a9 <span id="year"></span> HM Digital</div>\
-        <div class="muted">hmdigital.contact@gmail.com \'95 06 17 25 53 64</div>\
-      </div>\
-    </div>\
-  </footer>\
-\
-  <button class="btn primary backTop" id="backTop" type="button">\uc0\u8593  Retour en haut</button>\
-\
-  <script>\
-    // Year\
-    document.getElementById("year").textContent = new Date().getFullYear();\
-\
-    // Header brand = back to top\
-    document.getElementById("brandTop").addEventListener("click", () => \{\
-      window.scrollTo(\{ top: 0, behavior: "smooth" \});\
-    \});\
-\
-    // Back to top button\
-    const backTop = document.getElementById("backTop");\
-    backTop.addEventListener("click", () => window.scrollTo(\{ top: 0, behavior: "smooth" \}));\
-    window.addEventListener("scroll", () => \{\
-      if (window.scrollY > 500) backTop.classList.add("show");\
-      else backTop.classList.remove("show");\
-    \});\
-\
-    // Reveal animations\
-    const revealEls = document.querySelectorAll(".reveal");\
-    const io = new IntersectionObserver((entries) => \{\
-      entries.forEach(entry => \{\
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");\
-      \});\
-    \}, \{ threshold: 0.12 \});\
-    revealEls.forEach(el => io.observe(el));\
-\
-    // FormSubmit: message + reset (sans redirection)\
-    function showMessageAndReset()\{\
-      const msg = document.getElementById("formMsg");\
-      msg.textContent = "\uc0\u9989  Merci ! Votre demande a bien \'e9t\'e9 envoy\'e9e. Je vous recontacte rapidement.";\
-      setTimeout(() => \{\
-        const form = msg.closest("form");\
-        if(form) form.reset();\
-      \}, 300);\
-      return true; // laisse le POST partir dans l'iframe\
-    \}\
-  </script>\
-</body>\
-</html>\
-}
+  <style>
+    /* ===== Reset / Base ===== */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+      color:#0f172a;
+      background:#f6f7fb;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* ===== Fond animé "wow" ===== */
+    .bg{
+      position:fixed;inset:0;z-index:-10;pointer-events:none;overflow:hidden;
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(216,161,6,.22), transparent 60%),
+                  radial-gradient(900px 500px at 85% 20%, rgba(10,167,165,.18), transparent 62%),
+                  radial-gradient(1000px 700px at 55% 90%, rgba(99,102,241,.12), transparent 65%),
+                  #f6f7fb;
+    }
+    .orb{
+      position:absolute;width:520px;height:520px;border-radius:50%;
+      filter: blur(26px); opacity:.85;
+      animation: float 10s ease-in-out infinite;
+      transform: translate3d(0,0,0);
+    }
+    .o1{left:-140px;top:-160px;background:rgba(216,161,6,.36)}
+    .o2{right:-180px;top:18%;background:rgba(10,167,165,.30);animation-duration:12s}
+    .o3{left:18%;bottom:-200px;background:rgba(99,102,241,.20);animation-duration:14s}
+    @keyframes float{
+      0%{transform:translate(0,0) scale(1)}
+      50%{transform:translate(22px,-18px) scale(1.06)}
+      100%{transform:translate(0,0) scale(1)}
+    }
+    .grain{
+      position:fixed;inset:0;pointer-events:none;z-index:-9;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+      opacity:.10;
+      mix-blend-mode:multiply;
+    }
+
+    /* ===== Header ===== */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:linear-gradient(135deg, rgba(216,161,6,.16), rgba(10,167,165,.10), rgba(255,255,255,.75));
+      border-bottom:1px solid rgba(0,0,0,.08);
+      backdrop-filter: blur(14px);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;gap:12px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;
+    }
+    .logo{
+      width:46px;height:46px;border-radius:14px;
+      background:linear-gradient(135deg, rgba(216,161,6,.30), rgba(10,167,165,.20));
+      border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 14px 34px rgba(0,0,0,.10);
+      display:grid;place-items:center;
+      font-weight:900;
+    }
+    .brand strong{display:block;font-size:15px;line-height:1}
+    .brand span{display:block;font-size:12px;opacity:.7;margin-top:2px}
+
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{font-weight:800;opacity:.85;transition:.15s}
+    .nav-links a:hover{opacity:1;transform:translateY(-1px)}
+
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:11px 14px;border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+      font-weight:900;
+      box-shadow:0 14px 34px rgba(0,0,0,.08);
+      transition:transform .15s ease, box-shadow .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+    .btn.primary{
+      background:linear-gradient(135deg,#d8a106,#0aa7a5);
+      color:#0b1220;border-color:rgba(0,0,0,.12);
+    }
+    .burger{
+      display:none;
+      font-size:20px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+    }
+
+    .mobile-menu{
+      display:none;
+      flex-direction:column;
+      padding:12px 0 18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      animation: menuIn .18s ease-out;
+    }
+    @keyframes menuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    .mobile-menu a{padding:12px 0;font-weight:900;opacity:.9}
+    .mobile-menu.show{display:flex}
+
+    /* ===== Hero ===== */
+    .hero{padding:26px 0 10px}
+    .hero-grid{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch;
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(0,0,0,.08);
+      font-size:13px;font-weight:900;
+      width:fit-content;
+    }
+    .dot{width:9px;height:9px;border-radius:50%;background:#d8a106;box-shadow:0 0 0 5px rgba(216,161,6,.18)}
+    h1{font-size:46px;line-height:1.03;margin:14px 0 10px}
+    .lead{opacity:.75;line-height:1.7;max-width:60ch}
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+    .card{
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:22px;
+      box-shadow:0 18px 55px rgba(0,0,0,.10);
+      backdrop-filter: blur(10px);
+      padding:18px;
+      overflow:hidden;
+    }
+    .hero-img{
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.10);
+      position:relative;
+      min-height:320px;
+      background:#e5e7eb;
+    }
+    .hero-img img{
+      width:100%;height:100%;object-fit:cover;
+      transform:scale(1.02);
+      filter:saturate(1.05) contrast(1.05);
+    }
+    .hero-img::after{
+      content:"";
+      position:absolute;inset:0;
+      background: linear-gradient(to top, rgba(15,23,42,.35), rgba(15,23,42,0) 55%);
+      pointer-events:none;
+    }
+    .badge{
+      position:absolute;left:14px;bottom:14px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(0,0,0,.10);
+      font-weight:900;font-size:13px;
+      box-shadow:0 16px 40px rgba(0,0,0,.12);
+    }
+
+    /* ===== Sections ===== */
+    section{padding:44px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    h2{font-size:32px;margin:0}
+    .sub{opacity:.7;max-width:70ch;line-height:1.7;margin-top:8px}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    .box{
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:22px;
+      box-shadow:0 18px 55px rgba(0,0,0,.10);
+      backdrop-filter: blur(10px);
+      padding:18px;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .box:hover{transform:translateY(-5px);box-shadow:0 28px 80px rgba(0,0,0,.14)}
+    .icon{
+      width:46px;height:46px;border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(15,23,42,.06);
+      border:1px solid rgba(0,0,0,.08);
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
+    /* ===== Menu ===== */
+    .menu-wrap{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+    .menu-bar{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:18px;
+      padding:12px;
+      backdrop-filter: blur(10px);
+      box-shadow:0 18px 55px rgba(0,0,0,.10);
+    }
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+      font-weight:900;font-size:13px;
+      cursor:pointer;
+      transition:.15s;
+      user-select:none;
+    }
+    .tab.active{
+      background:linear-gradient(135deg, rgba(216,161,6,.22), rgba(10,167,165,.14));
+      border-color:rgba(216,161,6,.30);
+    }
+    .search{
+      display:flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+      min-width:250px;
+    }
+    .search input{
+      border:none;outline:none;background:transparent;
+      font:inherit;width:100%;
+    }
+
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .dish{
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:22px;
+      box-shadow:0 18px 55px rgba(0,0,0,.10);
+      backdrop-filter: blur(10px);
+      padding:16px;
+      transition:transform .18s ease, box-shadow .18s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .dish:hover{transform:translateY(-5px);box-shadow:0 28px 80px rgba(0,0,0,.14)}
+    .dish-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .dish h3{margin:0;font-size:16px}
+    .price{font-weight:900;white-space:nowrap}
+    .desc{opacity:.72;line-height:1.6;margin:8px 0 0}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{
+      font-size:12px;font-weight:900;
+      padding:7px 10px;border-radius:999px;
+      background:rgba(15,23,42,.06);
+      border:1px solid rgba(0,0,0,.08);
+      opacity:.9;
+    }
+
+    /* ===== Infos / Contact ===== */
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+    .row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+    .row:last-child{border-bottom:none}
+
+    iframe{border:0;border-radius:18px;overflow:hidden}
+    .map{min-height:280px}
+
+    /* ===== Reveal Animations ===== */
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      filter:blur(7px);
+      transition:opacity .8s ease, transform .8s ease, filter .8s ease;
+      will-change:opacity,transform,filter;
+    }
+    .reveal.show{opacity:1;transform:translateY(0);filter:blur(0)}
+    .d1{transition-delay:.05s}
+    .d2{transition-delay:.10s}
+    .d3{transition-delay:.15s}
+    .d4{transition-delay:.20s}
+
+    /* ===== Footer ===== */
+    footer{
+      padding:26px 0 36px;
+      border-top:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.35);
+      backdrop-filter: blur(10px);
+    }
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.75;font-weight:700}
+
+    /* ===== Responsive ===== */
+    @media (max-width:980px){
+      h1{font-size:36px}
+      .hero-grid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:1fr}
+      .info-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .burger{display:inline-flex}
+      .search{min-width:0;flex:1}
+      .container{padding:0 18px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand" id="topBtn" title="Retour en haut">
+          <div class="logo">LC</div>
+          <div>
+            <strong>Le Comptoir</strong>
+            <span>Cuisine maison • Sur place & à emporter</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#menu">Menu</a>
+          <a href="#infos">Infos</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="tel:0102030405">📞 Appeler</a>
+          <a class="btn" href="#contact">📅 Réserver</a>
+          <button class="burger" id="burger">☰</button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#menu">Menu</a>
+        <a href="#infos">Infos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="pill"><span class="dot"></span> Réservation conseillée • Service midi & soir</div>
+          <h1>Une cuisine qui donne envie dès la première visite.</h1>
+          <p class="lead">
+            Bienvenue au <strong>Comptoir</strong> : produits frais, recettes maison,
+            une ambiance chaleureuse. Découvrez le menu et réservez en 10 secondes.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#menu">🍽️ Voir le menu</a>
+            <a class="btn" href="tel:0102030405">📞 Appeler</a>
+            <a class="btn" href="#contact">📅 Réserver</a>
+          </div>
+          <p style="margin:14px 0 0; opacity:.7; font-weight:800;">📍 Paris • Ouvert du mardi au dimanche</p>
+        </div>
+
+        <div class="card reveal d1">
+          <div class="hero-img">
+            <!-- Remplace hero.jpg par ta vraie photo (dans le même dossier) -->
+            <img src="hero.jpg" alt="Photo du restaurant">
+            <div class="badge">⭐ 4,8/5 • Avis clients</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POINTS FORTS -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Pourquoi les clients reviennent</h2>
+            <div class="sub">Simple, bon, efficace : une expérience qui se retient.</div>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="box reveal d1">
+            <div class="icon">🥘</div>
+            <h3 style="margin:0 0 8px;">Cuisine maison</h3>
+            <div class="sub">Produits frais, recettes travaillées, portions généreuses.</div>
+          </div>
+          <div class="box reveal d2">
+            <div class="icon">⚡</div>
+            <h3 style="margin:0 0 8px;">Service rapide</h3>
+            <div class="sub">Idéal le midi. Réservation en un clic, appel direct.</div>
+          </div>
+          <div class="box reveal d3">
+            <div class="icon">🍷</div>
+            <h3 style="margin:0 0 8px;">Ambiance chaleureuse</h3>
+            <div class="sub">Sur place, à emporter, ou privatisation sur demande.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Le menu</h2>
+            <div class="sub">Clique sur une catégorie, ou cherche un plat.</div>
+          </div>
+        </div>
+
+        <div class="menu-wrap">
+          <div class="menu-bar reveal d1">
+            <div class="tabs" id="tabs">
+              <button class="tab active" data-cat="all">Tout</button>
+              <button class="tab" data-cat="entrees">Entrées</button>
+              <button class="tab" data-cat="plats">Plats</button>
+              <button class="tab" data-cat="desserts">Desserts</button>
+              <button class="tab" data-cat="boissons">Boissons</button>
+            </div>
+
+            <div class="search">
+              🔎 <input id="search" type="text" placeholder="Rechercher un plat..." />
+            </div>
+          </div>
+
+          <div class="menu-grid" id="menuGrid">
+            <!-- Entrées -->
+            <article class="dish reveal d1" data-cat="entrees" data-name="Burrata crémeuse">
+              <div class="dish-top">
+                <h3>Burrata crémeuse</h3>
+                <div class="price">9,90€</div>
+              </div>
+              <p class="desc">Tomates confites, huile d’olive, basilic, pain grillé.</p>
+              <div class="tags"><span class="tag">Végé</span><span class="tag">Best-seller</span></div>
+            </article>
+
+            <article class="dish reveal d2" data-cat="entrees" data-name="Tartare de saumon">
+              <div class="dish-top">
+                <h3>Tartare de saumon</h3>
+                <div class="price">11,50€</div>
+              </div>
+              <p class="desc">Citron vert, herbes fraîches, pickles maison.</p>
+              <div class="tags"><span class="tag">Frais</span></div>
+            </article>
+
+            <!-- Plats -->
+            <article class="dish reveal d1" data-cat="plats" data-name="Burger du Comptoir">
+              <div class="dish-top">
+                <h3>Burger du Comptoir</h3>
+                <div class="price">16,90€</div>
+              </div>
+              <p class="desc">Bœuf français, cheddar affiné, oignons confits, frites maison.</p>
+              <div class="tags"><span class="tag">Signature</span></div>
+            </article>
+
+            <article class="dish reveal d2" data-cat="plats" data-name="Pavé de saumon">
+              <div class="dish-top">
+                <h3>Pavé de saumon</h3>
+                <div class="price">18,90€</div>
+              </div>
+              <p class="desc">Sauce citronnée, légumes rôtis, pommes grenailles.</p>
+              <div class="tags"><span class="tag">Sans gluten</span></div>
+            </article>
+
+            <article class="dish reveal d3" data-cat="plats" data-name="Pâtes truffe">
+              <div class="dish-top">
+                <h3>Pâtes à la truffe</h3>
+                <div class="price">19,50€</div>
+              </div>
+              <p class="desc">Crème légère, parmesan, copeaux de truffe (selon saison).</p>
+              <div class="tags"><span class="tag">Premium</span><span class="tag">Végé</span></div>
+            </article>
+
+            <!-- Desserts -->
+            <article class="dish reveal d1" data-cat="desserts" data-name="Tiramisu maison">
+              <div class="dish-top">
+                <h3>Tiramisu maison</h3>
+                <div class="price">7,50€</div>
+              </div>
+              <p class="desc">Café, cacao, crème mascarpone, biscuits imbibés.</p>
+              <div class="tags"><span class="tag">Maison</span></div>
+            </article>
+
+            <article class="dish reveal d2" data-cat="desserts" data-name="Cœur coulant chocolat">
+              <div class="dish-top">
+                <h3>Cœur coulant chocolat</h3>
+                <div class="price">8,50€</div>
+              </div>
+              <p class="desc">Chocolat noir, glace vanille, pralin.</p>
+              <div class="tags"><span class="tag">Ultra gourmand</span></div>
+            </article>
+
+            <!-- Boissons -->
+            <article class="dish reveal d1" data-cat="boissons" data-name="Verre de vin">
+              <div class="dish-top">
+                <h3>Verre de vin</h3>
+                <div class="price">5,50€</div>
+              </div>
+              <p class="desc">Rouge / Blanc / Rosé — demandez la sélection du moment.</p>
+              <div class="tags"><span class="tag">Cave</span></div>
+            </article>
+
+            <article class="dish reveal d2" data-cat="boissons" data-name="Citronnade maison">
+              <div class="dish-top">
+                <h3>Citronnade maison</h3>
+                <div class="price">4,90€</div>
+              </div>
+              <p class="desc">Citron pressé, menthe, sirop léger, eau fraîche.</p>
+              <div class="tags"><span class="tag">Maison</span><span class="tag">Sans alcool</span></div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFOS -->
+    <section id="infos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Infos pratiques</h2>
+            <div class="sub">Horaires, adresse, et tout ce qu’il faut pour venir facilement.</div>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="box reveal d1">
+            <h3 style="margin:0 0 10px;">Horaires</h3>
+            <div class="row"><span>🕛</span><span>Mardi – Dimanche : 12h – 14h30 • 19h – 23h</span></div>
+            <div class="row"><span>🚫</span><span>Lundi : fermé</span></div>
+            <div class="row"><span>📍</span><span>12 Rue Exemple, 75000 Paris</span></div>
+          </div>
+
+          <div class="box reveal d2">
+            <h3 style="margin:0 0 10px;">Sur place / À emporter</h3>
+            <div class="row"><span>✅</span><span>Réservation conseillée le soir</span></div>
+            <div class="row"><span>🛵</span><span>À emporter disponible</span></div>
+            <div class="row"><span>🎉</span><span>Privatisation sur demande</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Réserver / Contact</h2>
+            <div class="sub">Un appel et c’est réglé. Ou envoi d’un message rapide.</div>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="box reveal d1">
+            <h3 style="margin:0 0 10px;">Contact</h3>
+            <div class="row"><span>📞</span><a href="tel:0102030405"><strong>01 02 03 04 05</strong></a></div>
+            <div class="row"><span>✉️</span><a href="mailto:contact@lecomptoir.fr">contact@lecomptoir.fr</a></div>
+            <div class="row"><span>📍</span><span>12 Rue Exemple, 75000 Paris</span></div>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn primary" href="tel:0102030405">📞 Appeler</a>
+              <a class="btn" href="https://www.google.com/search?q=restaurant" target="_blank" rel="noreferrer">⭐ Avis Google</a>
+            </div>
+          </div>
+
+          <div class="box reveal d2">
+            <h3 style="margin:0 0 10px;">Plan</h3>
+            <!-- Remplace l'iframe par ta vraie adresse Google Maps -->
+            <iframe class="map" loading="lazy"
+              src="https://www.google.com/maps?q=Paris&output=embed"
+              width="100%" height="280" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> Le Comptoir</div>
+      <div>12 Rue Exemple • Paris • <a href="tel:0102030405">01 02 03 04 05</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Année
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll top
+    document.getElementById("topBtn").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Menu mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burger.addEventListener("click", () => mobileMenu.classList.toggle("show"));
+    document.querySelectorAll(".mobile-menu a").forEach(a => {
+      a.addEventListener("click", () => mobileMenu.classList.remove("show"));
+    });
+
+    // Reveal animations
+    const revealEls = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("show");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Menu filters + search
+    const tabs = document.querySelectorAll(".tab");
+    const dishes = Array.from(document.querySelectorAll(".dish"));
+    const search = document.getElementById("search");
+    let activeCat = "all";
+
+    function applyFilters() {
+      const q = (search.value || "").trim().toLowerCase();
+      dishes.forEach(d => {
+        const cat = d.dataset.cat;
+        const name = (d.dataset.name || "").toLowerCase();
+        const matchCat = (activeCat === "all") || (cat === activeCat);
+        const matchText = !q || name.includes(q);
+        d.style.display = (matchCat && matchText) ? "" : "none";
+      });
+    }
+
+    tabs.forEach(t => {
+      t.addEventListener("click", () => {
+        tabs.forEach(x => x.classList.remove("active"));
+        t.classList.add("active");
+        activeCat = t.dataset.cat;
+        applyFilters();
+      });
+    });
+
+    search.addEventListener("input", applyFilters);
+  </script>
+</body>
+</html>
